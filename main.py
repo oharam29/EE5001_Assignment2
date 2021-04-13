@@ -1,9 +1,19 @@
 from BBS import *
+import random
 
-x = random.randint(1, 10000)
-y = random.randint(1, 10000)
-seed = random.randint(1,1000)
+def randomness_test():
+    x1 = 4376348
+    y1 = 2049758
+    seed = random.randint(1,1000)
+    run1 = Display_stats(x1, y1, seed)
+    print_stats(run1)
 
-BBS(x, y, seed)
+    seed = random.randint(1,100)
 
+    run2 = Display_stats(x1, y1, seed)
+    print_stats(run2)
 
+    compare_runs(run1, run2)
+
+if __name__ == '__main__':
+    randomness_test()
