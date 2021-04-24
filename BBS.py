@@ -37,13 +37,18 @@ def BBS(x, y, seed):
     M = p*q
     print("P * Q: " + str(M))
 
-    edited_seed = seed
+    edited_seed = seed * seed % M
     out = ""
 
+
     for num in range(seed):
-        edited_seed = edited_seed * edited_seed % M
-        b = edited_seed % 2
-        out += str(b)
+        if num == 1:
+            b = edited_seed % 2
+            out += str(b)
+        else:
+            edited_seed = edited_seed * edited_seed % M
+            b = edited_seed % 2
+            out += str(b)
 
     print("Output: ")
     print(out)
