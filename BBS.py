@@ -40,8 +40,7 @@ def BBS(x, y, seed):
     edited_seed = seed * seed % M
     out = ""
 
-
-    for num in range(seed):
+    for num in range(1, seed+1):
         if num == 1:
             b = edited_seed % 2
             out += str(b)
