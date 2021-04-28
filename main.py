@@ -15,7 +15,7 @@ def print_XOR_shift(x,y,z,w):
     print(str(w))
 
     #do the XORSHIFT
-     xorshift(w, x, y, z)
+    xorshift(w, x, y, z)
 
 
 def BBS_randomness_test():
