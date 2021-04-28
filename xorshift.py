@@ -8,3 +8,4 @@ def xorshift(w,x,y,z):
     y = z
     w = (w ^ (w >> 19)) ^ (t ^ (t >> 8))
     return w
+
