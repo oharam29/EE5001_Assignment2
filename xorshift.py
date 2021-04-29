@@ -53,6 +53,20 @@ def freqtest(out):
     print("Freq test finished")
     print("//---------------------------------\n")
 
+def serial_test(output):
 
+
+    print("Number of 01s generated: " + str(output.count("01")))
+    print("Number of 12s generated: " + str(output.count("12")))
+    print("Number of 23s generated: " + str(output.count("23")))
+    print("Number of 34s generated: " + str(output.count("34")))
+    print("Number of 45s generated: " + str(output.count("45")))
+    print("Number of 56s generated: " + str(output.count("56")))
+    print("Number of 67s generated: " + str(output.count("67")))
+    print("Number of 78s generated: " + str(output.count("78")))
+
+    print("//---------------------------------")
+    print("Serial test finished")
+    print("//---------------------------------\n")
 
 

@@ -59,7 +59,7 @@ def BBS(x, y, seed):
     return out
 
 
-def Display_stats(output):
+def BBS_freq_test(output):
 
     stats = []
     stats.append(str(len(output)))
@@ -71,7 +71,7 @@ def Display_stats(output):
 
     return stats
 
-def serial_test(output):
+def BBS_serial_test(output):
     print("//---------------------------------")
     print("Serial test - started:")
     print("//---------------------------------")
@@ -86,7 +86,7 @@ def serial_test(output):
     print("//---------------------------------\n")
 
 
-def poker_test(output):
+def BBS_poker_test(output):
     print("//---------------------------------")
     print("Poker test started:")
     print("//---------------------------------")
