@@ -8,31 +8,34 @@ z = 521288629
 w = 88675123
 
 def print_XOR_shift(x,y,z,w):
-    #print the initial values
-    print(str(x))
-    print(str(y))
-    print(str(z))
-    print(str(w))
-
-    #do the XORSHIFT
-    xorshift(w, x, y, z)
+    i = xorshift(w, x, y, z)
+    out = ""
+    out += out + str(i)
+    print("Output: " + str(out))
+    pokertest(out)
+    freqtest(out)
 
 
-def BBS_randomness_test():
+def BBS_test():
     x1 = 4376348
     y1 = 2049758
     seed = random.randint(1,1000)
-    run1 = Display_stats(x1, y1, seed)
-    print_stats(run1)
+    run1 = BBS(x1, y1, seed)
+    res1 = Display_stats(run1)
+    print_stats(res1)
+    poker_test(res1)
+    serial_test(res1)
 
     seed = random.randint(1,100)
 
-    run2 = Display_stats(x1, y1, seed)
-    print_stats(run2)
+    run2 = BBS(x1, y1, seed)
+    res2 = Display_stats(run2)
+    print_stats(res2)
+    poker_test(res2)
+    serial_test(res2)
 
-    compare_runs(run1, run2)
+    compare_runs(res1, res2)
 
 if __name__ == '__main__':
-    #BBS_randomness_test()
-    W1 = xorshift(x,y,z,w)
-    print(W1)
+    BBS_test()
+    print_XOR_shift(x,y,z,w)

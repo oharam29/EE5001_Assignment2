@@ -59,8 +59,8 @@ def BBS(x, y, seed):
     return out
 
 
-def Display_stats(x,y,z):
-    output = BBS(x,y,z)
+def Display_stats(output):
+
     stats = []
     stats.append(str(len(output)))
     stats.append(str(output.count("0")))
@@ -68,7 +68,40 @@ def Display_stats(x,y,z):
     stats.append(str(output.count("0")/len(output)))
     stats.append(str(output.count("1") / len(output)))
     stats.append(output.count("1") / len(output) + (output.count("0")/len(output)))
+
     return stats
+
+def serial_test(output):
+    print("//---------------------------------")
+    print("Serial test - started:")
+    print("//---------------------------------")
+
+    print("Number of 00s generated: " + str(output.count("00")))
+    print("Number of 01s generated: " + str(output.count("01")))
+    print("Number of 10s generated: " + str(output.count("10")))
+    print("Number of 11s generated: " + str(output.count("11")))
+
+    print("//---------------------------------")
+    print("Serial test finished")
+    print("//---------------------------------\n")
+
+
+def poker_test(output):
+    print("//---------------------------------")
+    print("Poker test started:")
+    print("//---------------------------------")
+
+    print("Number of 00000s generated: " + str(output.count("00000")))
+    print("Number of 00001s generated: " + str(output.count("00001")))
+    print("Number of 00011s generated: " + str(output.count("00011")))
+    print("Number of 00111s generated: " + str(output.count("00111")))
+    print("Number of 01111s generated: " + str(output.count("01111")))
+    print("Number of 11111s generated: " + str(output.count("11111")))
+
+    print("//---------------------------------")
+    print("Poker test finished")
+    print("//---------------------------------\n")
+
 
 def print_stats(stats):
     print("print_stats -- STARTED")
@@ -83,6 +116,7 @@ def print_stats(stats):
     print("% of 0s: " + stats[3])
     print("% of 1s: " + stats[4])
     print(stats[5])
+
     print("//---------------------------------")
     print("print_stats -- FINISHED\n")
     print("//---------------------------------")
